@@ -74,7 +74,7 @@ console.log(dice());
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
 
-const whoIsBigger = (num1, num2) => {
+/* const whoIsBigger = (num1, num2) => {
   if (num1 > num2) {
     return num1;
   } else if (num1 < num2) {
@@ -82,23 +82,40 @@ const whoIsBigger = (num1, num2) => {
   } else if (num1 == num2) {
     return num1;
   }
+}; */
+/* const whoIsBigger = (num1, num2) => {
+  if (num1 > num2) {
+    return num1;
+  } else return num2;
 };
-console.log(whoIsBigger(5, 10));
+console.log(whoIsBigger(5, 10)); */
 /* ESERCIZIO 3
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
 
   Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"]
 */
 
-const splitMe = (string) => {
+/* const splitMe = (string) => {
   return string.split(" ");
 };
-console.log(splitMe("i love coding"));
+console.log(splitMe("i love coding")); */
+
+/* const splitMe = (string) => {
+  return string.split(" ");
+};
+console.log(splitMe("I Love coding")); */
 
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
+
+/* const deleteOne = (string, boolean) => {
+  if (boolean) {
+    return string.slice(1);
+  } else return string.slice(0, -1);
+};
+console.log(deleteOne("Ciao", true)); */
 
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
@@ -106,13 +123,39 @@ console.log(splitMe("i love coding"));
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
 
+const onlyLetters = (stringa) => {
+  const arr = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+  let risultato = "";
+  for (let i = 0; i < stringa.length; i++) {
+    console.log(stringa[i]);
+    if (arr.includes(stringa[i])) {
+    } else {
+      risultato += stringa[i];
+    }
+  }
+  console.log(risultato);
+};
+
+onlyLetters("ciao 400");
+
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
 
+/* const isThisAnEmail = (email) => {
+  return (email.includes("@") && email.includes(".it")) || email.includes(".com");
+}; */
+
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
+
+/* const whatDayItIs = () => {
+  let oggi = new Date();
+  console.log(oggi.toDateString());
+  console.log(oggi.getDay());
+};
+whatDayItIs(); */
 
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
@@ -126,10 +169,26 @@ console.log(splitMe("i love coding"));
       values: [3, 3, 4]
   }
 */
+/* const rollTheDices = (numero) => {
+  const risultato = {
+    sum: 0,
+    values: [],
+  };
+  for (let i = 0; i < numero; i++) {
+    let numeroTirato = dice();
+    risultato.sum += numeroTirato;
+    risultato.values.push(numeroTirato);
+  }
+  return risultato;
+}; */
 
+rollTheDices(7);
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
+const howManyDays = (data) => {};
+
+howManyDays();
 
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
